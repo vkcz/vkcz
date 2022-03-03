@@ -1,5 +1,10 @@
 ### Hi there 👋
 
+The following JS snippet provides the sum of the letters in some text (`a = 1`, `b = 2`, ... `z = 26`):
+```js
+("TEXT HERE").toLowerCase().split("").filter(s => s.match(/[a-z]/)).map(l => l.codePointAt(0) - 96).reduce((a, b) => a + b)
+```
+
 <!--
 **vkcz/vkcz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
