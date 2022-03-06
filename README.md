@@ -1,8 +1,26 @@
 ### Hi there 👋
 
-The following JS snippet provides the sum of the letters in some text (`a = 1`, `b = 2`, ... `z = 26`):
+The following JS function provides the sum of the letters in some text (`a = 1`, `b = 2`, ... `z = 26`):
 ```js
-("TEXT HERE").toLowerCase().split("").filter(s => s.match(/[a-z]/)).map(l => l.codePointAt(0) - 96).reduce((a, b) => a + b)
+lettersum = t => t.toLowerCase().split("").filter(s => s.match(/[a-z]/)).map(l => l.codePointAt(0) - 96).reduce((a, b) => a + b);
+```
+
+This one computes <var>b</var><sup><var>e</var></sup> mod <var>m</var>:
+```js
+modpow = (b, e, m) => {
+    let r = 1;
+    while (e > 0) {
+        r = (r * b) % m;
+        e--;
+    }
+    return r;
+};
+```
+
+The following, using those functions, with my full name in place of `"text"`, outputs `1141`:
+```js
+const s = lettersum("text");
+console.log(modpow(s, s, 8191));
 ```
 
 <!--
