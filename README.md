@@ -17,7 +17,7 @@ modpow = (b, e, m) => {
 };
 ```
 
-The following, using those functions, with my full name in place of `"text"`, outputs `1141`:
+The following, using those functions, with the two primary parts of my name in place of `"text"`, outputs `1141`:
 ```js
 const s = lettersum("text");
 console.log(modpow(s, s, 8191));
